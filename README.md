@@ -1,22 +1,18 @@
-# Student_Managing_System
+# Student Management System
+a console-based student management system written in C++ using object-oriented programming.
 
-A console-based student management system written in C++ using object-oriented programming.
-
-## Features
-- Add a new student
-- Remove a student
-- Search for a student by ID or name
-- Update student details
-- Display all students
+##Features
+- Student class with ID, name, and grade
+- Add, remove, serach, and list students (in progress)
 
 ## Technologies
-- C++
-- OOP (classes, encapsulation)
+-C++
+-Object-oriented programming (classes, encapsulation)
 
 ## How to Run
-1. Clone the repo
-2. Compile: `g++ main.cpp Student.cpp -o main`
-3. Run: `./main` (Windows: `main.exe`)
+1. Clone the repository
+2. Compile:'g++ main.cpp student.cpp -o main'
+3.Run: '.\main' (Windows) or './main' (mac/Linux)
 
 ## Author
-Yvonne Akoth 
+Yvonne Akoth
