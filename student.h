@@ -10,4 +10,5 @@ class Student{
     public:
     Student(int id, const std::string& name, double grade);
     void display()const;
+    int getId()const;
 };

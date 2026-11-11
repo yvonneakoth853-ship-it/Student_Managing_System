@@ -12,3 +12,6 @@ cout <<"ID:" << id << endl;
 cout << "Name:" << name << endl;
 cout << "Grade:" << grade << endl;
 }
+int Student::getId() const {
+    return id;
+}
