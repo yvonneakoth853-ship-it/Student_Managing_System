@@ -2,8 +2,10 @@
 a console-based student management system written in C++ using object-oriented programming.
 
 ##Features
-- Student class with ID, name, and grade
-- Add, remove, serach, and list students (in progress)
+- Add, remove, serach, and list students
+-Interactive menu in the console
+-Input validation for grades
+-Students are saved to a file and loaded when the program starts
 
 ## Technologies
 -C++
