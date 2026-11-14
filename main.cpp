@@ -16,6 +16,8 @@ int main() {
 
     cout << "After removing student 2:" << endl;
     manager.displayAll();
+manager.searchById(3);
+manager.searchById(99);
 
     return 0;
 }

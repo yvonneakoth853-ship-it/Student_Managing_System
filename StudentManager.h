@@ -10,4 +10,5 @@ class StudentManager{
     void addStudent(const Student& s);
     bool removeStudent(int id);
     void displayAll() const;
+    void searchById(int id) const;
 };

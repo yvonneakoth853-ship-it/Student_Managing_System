@@ -24,3 +24,13 @@ void StudentManager::displayAll() const {
         cout << "-----" << endl;
     }
 }
+void StudentManager::searchById(int id) const{
+    for (const Student& s : students){
+        if (s.getId() == id){
+            cout << "Student found:" <<endl;
+            s.display();
+            return;
+        }
+    }
+    cout << "No student with ID " << id << " found. " << endl;
+}
