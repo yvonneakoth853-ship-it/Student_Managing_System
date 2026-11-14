@@ -11,4 +11,6 @@ class StudentManager{
     bool removeStudent(int id);
     void displayAll() const;
     void searchById(int id) const;
+    void saveToFile(const std::string& filename) const;
+    void loadFromFile(const std::string& filename);
 };

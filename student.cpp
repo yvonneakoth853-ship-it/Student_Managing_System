@@ -15,3 +15,9 @@ cout << "Grade:" << grade << endl;
 int Student::getId() const {
     return id;
 }
+std::string Student::getName() const {
+    return name;
+}
+double Student::getGrade() const {
+    return grade;
+}

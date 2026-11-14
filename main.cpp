@@ -6,6 +6,7 @@ using namespace std;
 
 int main() {
     StudentManager manager;
+    manager.loadFromFile("students.txt");
     int choice = 0;
     do{
         cout << "\n=== Student Management System===" << endl;
@@ -37,6 +38,7 @@ int main() {
                     cout << "Please enter a number (e.g. 85.5): ";
                 }
                 manager.addStudent(Student(id, name, grade));
+                manager.saveToFile("students.txt");
                 cout << "Student added." << endl;
                 break;
             }
@@ -45,6 +47,7 @@ int main() {
                 cout << "Enter ID to remove: ";
                 cin >> id;
                 if (manager.removeStudent(id)){
+                    manager.saveToFile("students.txt");
                     cout << "Student removed." << endl;
                 } else {
                     cout << "No student with that ID." << endl;

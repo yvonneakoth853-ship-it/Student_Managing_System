@@ -1,4 +1,6 @@
 #include "StudentManager.h"
+#include <fstream>
+#include <sstream>
 #include <iostream>
 using namespace std;
 
@@ -33,4 +35,33 @@ void StudentManager::searchById(int id) const{
         }
     }
     cout << "No student with ID " << id << " found. " << endl;
+}
+void StudentManager::saveToFile(const string& filename) const {
+    ofstream out(filename);
+    if(!out) {
+        cout << "Could not save to " << filename << endl;
+        return;
+    }
+    for (const Student& s : students) {
+        out << s.getId() << "|" << s.getName() << "|" << s.getGrade() << "\n";
+    }
+}
+void StudentManager::loadFromFile(const string& filename) {
+    ifstream in(filename);
+    if (!in) {
+        return;
+    }
+    students.clear();
+    string line;
+    while (getline(in,line)) {
+        stringstream ss(line);
+        string idStr, name, gradeStr;
+        if (getline(ss, idStr, '|') && getline(ss, name, '|')&& getline(ss, gradeStr)) {
+            try {
+                students.push_back(Student(stoi(idStr), name, stod(gradeStr)));
+            } catch (...) {  
+                 // skip any damaged line
+                 }
+        }
+    }
 }
